@@ -935,6 +935,10 @@ input[type="hidden"][name="attr_type"][value="familiar"] ~ .card {
   text-transform: uppercase;
 }
 
+.book img {
+  height: 36px;
+}
+
 .book input[type="text"] {
   text-align: left;
   font-weight: bold;
