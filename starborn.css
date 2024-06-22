@@ -1,0 +1,966 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Pirata+One&family=Yatra+One&display=swap");
+.starborn-sheet {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 9px;
+  width: 100%;
+  height: 100%;
+  max-width: 840px;
+}
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 36px;
+  width: 100%;
+  height: 100%;
+  max-width: 840px;
+}
+
+/* Edit mode */
+.banner {
+  position: sticky;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: stretch;
+  width: 100%;
+  height: 36px;
+}
+
+.banner label:hover {
+  height: 36px !important;
+}
+
+.banner label {
+  all: unset;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 9px;
+
+  height: 36px;
+  cursor: pointer;
+
+  background: #ff0099;
+  transition: height 500ms;
+}
+
+.banner input[name="attr_edit"] {
+  display: none;
+}
+
+.banner label span:after {
+  content: "Exit edit mode";
+  color: white;
+}
+
+input[name="attr_edit"][value="0"] ~ .banner label {
+  height: 6px;
+}
+
+input[name="attr_edit"][value="0"] ~ .banner span:after {
+  content: "Edit mode";
+}
+
+input[name="attr_edit"][value="0"] ~ .banner label:not(:hover) *,
+input[name="attr_edit"][value="0"] ~ .banner label:not(:hover) *:before,
+input[name="attr_edit"][value="0"] ~ .banner label:not(:hover) *:after {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+/* Main sheet */
+.col-main {
+  width: calc(100% / 9 * 7);
+  width: 100%;
+}
+
+.col-sidebar {
+  position: relative;
+  z-index: 100;
+  width: calc((100% / 9 * 2) - 36px);
+  display: none;
+}
+
+.section {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 6px;
+}
+
+/* Text Styles */
+
+p,
+li {
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  text-align: justify;
+}
+
+em.hightlight {
+  position: relative;
+  padding: 0px 3px;
+  font-weight: bold;
+}
+
+em.hightlight:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  z-index: -1;
+  display: block;
+
+  height: 0.9lh;
+  width: 100%;
+  background: #000000;
+  opacity: 0.3;
+
+  transform: rotate(-1deg);
+}
+
+em.pink:after {
+  background: #ff0099;
+}
+em.blue:after {
+  background: #00eeff;
+}
+
+h1,
+.ribbon {
+  width: 100%;
+  margin: 27px 0;
+  text-align: center;
+  font-family: "Pirata One", system-ui;
+  font-size: 68px;
+  font-weight: normal;
+  line-height: 1;
+  color: black;
+  text-shadow: 0px -3px 0px rgba(255, 0, 153, 1),
+    0px 3px 0px rgba(0, 238, 255, 1);
+}
+.ribbon {
+  position: relative;
+  height: 36px;
+  background-image: radial-gradient(black 12.8%, transparent 12.8%),
+    radial-gradient(black 12.8%, transparent 12.8%);
+  background-position: 0px 0px, 4px 4px;
+  background-size: 8px 8px;
+  background-color: transparent;
+}
+
+.ribbon:before,
+.ribbon:after {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#ff0099 12.8%, transparent 12.8%),
+    radial-gradient(#ff0099 12.8%, transparent 12.8%);
+  background-position: 0 -2px, 4px 4px;
+  background-size: 8px 8px;
+  background-color: transparent;
+}
+
+.ribbon:after {
+  background-image: radial-gradient(#00eeff 12.8%, transparent 12.8%),
+    radial-gradient(#00eeff 12.8%, transparent 12.8%);
+  background-position: 0 2px, 4px 4px;
+}
+
+.ribbon .logo {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  display: block;
+  line-height: 0.5;
+  padding: 6px;
+  background: white;
+}
+
+.ribbon > span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  line-height: 0.5;
+}
+.ribbon > span:before,
+.ribbon > span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(0px - 0.5lh);
+  transform: rotate(45deg);
+
+  display: block;
+  width: 1lh;
+  height: 1lh;
+  background: white;
+}
+
+.ribbon > span:after {
+  left: initial;
+  right: calc(0px - 0.5lh);
+}
+
+h2,
+.tagline {
+  font-family: "Yatra One", system-ui;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+  color: black;
+  text-transform: uppercase;
+}
+
+.tagline {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+
+h2 {
+  display: block;
+  margin: 0;
+  margin-top: 12px;
+
+  text-align: center;
+  border: 2px solid black;
+  border-left-width: 18px;
+  border-right-width: 18px;
+
+  box-shadow: 0px -1px 0px rgba(255, 0, 153, 1),
+    0px 1px 0px rgba(0, 238, 255, 1);
+}
+h2 div {
+  border: 4px solid white;
+  background-image: radial-gradient(black 12.8%, transparent 12.8%),
+    radial-gradient(black 12.8%, transparent 12.8%);
+  background-position: 0px 0px, 4px 4px;
+  background-size: 8px 8px;
+  background-color: white;
+}
+h2 span {
+  display: inline-block;
+  padding: 3px 6px;
+  padding-bottom: 0;
+  background: white;
+}
+
+h3 {
+  font-family: "Pirata One", system-ui;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1;
+  color: black;
+  text-shadow: 0px -2px 0px rgba(255, 0, 153, 1),
+    0px 2px 0px rgba(0, 238, 255, 1);
+}
+
+/* Forms */
+
+.group-details {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: stretch;
+  width: 100%;
+}
+
+.group-details label {
+  width: 75px;
+  margin-right: 6px !important;
+}
+
+.group-details label:first-child {
+  flex-grow: 1;
+}
+
+.group-details label:first-child input[type="text"] {
+  text-align: left;
+}
+
+.group-details label:last-child {
+  width: 175px;
+  margin-right: 0 !important;
+}
+
+label {
+  display: flex !important;
+  flex-flow: row nowrap;
+  flex-shrink: 1;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 2px solid black;
+}
+
+label span {
+  font-family: "Yatra One", system-ui;
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  text-transform: uppercase;
+  height: 14px;
+}
+
+input[type="text"],
+textarea {
+  all: unset;
+  display: inline-block;
+  width: 100%;
+  padding: 0 6px;
+  flex-grow: 1;
+  font-family: serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+label.textarea {
+  align-items: flex-start;
+}
+
+label.textarea textarea {
+  text-align: left;
+  height: calc(18px * 3);
+}
+
+.group-attributes {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 6px;
+  width: 100%;
+}
+.group-attributes > div:first-child {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 6px;
+  flex-shrink: 1;
+}
+
+.pool,
+.pool .input-group {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-shrink: 1;
+  height: 64px;
+  align-items: stretch;
+  border-collapse: unset;
+}
+
+.pool {
+  border: 2px solid black;
+  box-shadow: 0px -1px 0px rgba(255, 0, 153, 1),
+    0px 1px 0px rgba(0, 238, 255, 1);
+}
+
+.pool label {
+  border: none;
+}
+
+.pool > span {
+  position: absolute;
+  z-index: 100;
+  bottom: -3px;
+  left: -3px;
+
+  display: block;
+  padding: 2px;
+  background: white;
+
+  font-family: "Pirata One", system-ui;
+  font-size: 22px;
+  font-weight: normal;
+  color: black;
+  text-transform: none;
+  line-height: 18px;
+  height: 14px;
+}
+
+.pool label {
+  position: relative;
+}
+
+.pool label span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.pool label:last-child > span {
+  position: absolute;
+  top: unset;
+  left: unset;
+  bottom: 2px;
+  right: 2px;
+}
+
+.pool label:last-child:before {
+  content: "";
+  position: absolute;
+  left: -64px;
+  display: block;
+  width: 128px;
+  height: 0px;
+  transform: rotate(-60deg);
+
+  border-bottom: 1px dashed black;
+}
+
+.pool .input-group {
+  overflow: hidden;
+}
+
+.pool input[type="text"] {
+  height: 64px;
+}
+
+.pool-level,
+.pool-spark {
+  width: unset;
+  width: 50px !important;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.pool-health {
+  width: unset;
+  width: 120px !important;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.pool-attribute {
+  flex-grow: 1;
+}
+
+.pool-attribute .label {
+  position: absolute;
+  z-index: 100;
+  bottom: -2px;
+  left: -4px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  padding: 2px;
+
+  line-height: 18px;
+  height: 14px;
+}
+
+.pool-attribute .label :first-child {
+  background: white;
+  padding-top: 2px;
+  padding-right: 2px;
+
+  font-family: "Pirata One", system-ui;
+  font-size: 22px;
+  font-weight: normal;
+  color: black;
+  text-transform: none;
+}
+
+.pool-attribute .label :last-child {
+  font-family: "Yatra One", system-ui;
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  text-transform: uppercase;
+  height: 14px;
+}
+
+.meter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 9px;
+  width: 100%;
+}
+
+.box {
+  position: relative;
+}
+
+.box input[type="radio"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.box input[type="hidden"][value="0"] ~ input[type="radio"][value="1"],
+.box input[type="hidden"][value="1"] ~ input[type="radio"][value="2"],
+.box input[type="hidden"][value="2"] ~ input[type="radio"][value="0"] {
+  z-index: 10;
+}
+
+.box > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.box > span span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+
+  position: relative;
+  z-index: 100;
+  top: 1.5px;
+  left: 1.5px;
+
+  transform: rotate(-45deg);
+  font-family: "Yatra One", system-ui;
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+.box span:before {
+  position: absolute;
+  transform: rotate(-45deg) translateY(3px);
+  font-family: "Yatra One", system-ui;
+  font-size: 27px;
+  font-weight: normal;
+  color: #ff0099;
+  text-transform: uppercase;
+}
+
+.box input[type="hidden"][value="1"] ~ span:before {
+  content: "/";
+}
+.box input[type="hidden"][value="2"] ~ span:before {
+  content: "X";
+}
+
+input[name="attr_edit"][value="on"] ~ .box,
+input[name="attr_edit"][value="0"] ~ .edit {
+  display: none !important;
+}
+
+.edit {
+  position: relative;
+}
+
+.edit > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.edit > span span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+
+  position: relative;
+  z-index: 100;
+  top: 1.5px;
+  left: 1.5px;
+
+  transform: rotate(-45deg);
+  font-family: "Yatra One", system-ui;
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+.edit input[type="radio"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.edit input[type="hidden"][value="+0"] ~ input[type="radio"][value="-1"],
+.edit input[type="hidden"][value="+1"] ~ input[type="radio"][value="+0"],
+.edit input[type="hidden"][value="-1"] ~ input[type="radio"][value="+1"] {
+  z-index: 10;
+}
+
+.mode-toggle,
+.mode-toggle * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 12px;
+  color: black;
+}
+
+.mode-toggle input[type="checkbox"] {
+  opacity: 0;
+  z-index: 10;
+}
+
+.mode-toggle span:after {
+  content: "◥";
+}
+
+input[type="hidden"][value="on"] ~ .mode-toggle span:after {
+  color: #ff0099;
+}
+
+.group-status {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 9px;
+  margin: 18px 0;
+}
+
+.status {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 9px;
+
+  width: fit-content;
+}
+
+.status label,
+.heat,
+.heat .meter,
+.hunted,
+.strain,
+.strain .meter,
+.wallet,
+.wallet .meter {
+  all: unset;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  /* column-gap: 3px; */
+}
+
+.heat .meter:after,
+.strain .meter:after,
+.wallet .meter:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  z-index: -1;
+  display: block;
+  flex-shrink: 1;
+  width: calc(100% - 10px);
+  height: 0;
+  margin: 0;
+  border: 1px solid black;
+}
+
+.hunted .meter {
+  display: flex;
+  column-gap: 3px;
+}
+
+.wallet .meter:not(:last-child) {
+  margin-right: 6px;
+}
+
+.heat span,
+.hunted span,
+.strain span,
+.wallet span {
+  font-family: "Yatra One", system-ui;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+  color: black;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+
+input.toggle,
+input.toggle:active,
+input.toggle:focus,
+input.toggle:target {
+  position: relative;
+  appearance: none;
+  border: none;
+  outline: none;
+  margin-right: 4px;
+}
+
+input.toggle:before,
+input.toggle:active:before,
+input.toggle:focus:before,
+input.toggle:target:before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  border: 2px solid black;
+  border-radius: 100%;
+  background: white;
+}
+
+input.toggle.special:before {
+  content: "";
+  border-radius: 2px;
+  transform: rotate(45deg);
+  box-shadow: -0.5px -0.5px 0px rgba(255, 0, 153, 1),
+    0.5px 0.5px 0px rgba(0, 238, 255, 1);
+}
+
+input.toggle:checked:after {
+  content: "/";
+  position: absolute;
+  top: -11px;
+  left: 0px;
+  font-family: "Yatra One", system-ui;
+  font-size: 27px;
+  font-weight: normal;
+  color: #ff0099;
+  text-transform: uppercase;
+}
+
+.spacer {
+  all: unset;
+  display: block;
+  flex-shrink: 1;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border: 1px solid black;
+}
+
+/* Loadout */
+
+.group-bags {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 6px;
+}
+
+.bag,
+.bag .input-group {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-shrink: 1;
+  height: 64px;
+  align-items: stretch;
+  border-collapse: unset;
+}
+
+.bag {
+  border: 2px solid black;
+  box-shadow: 0px -1px 0px rgba(255, 0, 153, 1),
+    0px 1px 0px rgba(0, 238, 255, 1);
+}
+
+.bag label {
+  border: none;
+}
+
+.bag > span {
+  position: absolute;
+  z-index: 100;
+  bottom: -3px;
+  left: -3px;
+
+  display: block;
+  padding: 2px;
+  background: white;
+
+  font-family: "Pirata One", system-ui;
+  font-size: 22px;
+  font-weight: normal;
+  color: black;
+  text-transform: none;
+  line-height: 18px;
+  height: 14px;
+}
+
+.bag > span span {
+  font-family: "Yatra One", system-ui;
+}
+
+.bag label {
+  position: relative;
+}
+
+.bag label span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.bag label:last-child > span {
+  position: absolute;
+  top: unset;
+  left: unset;
+  bottom: 2px;
+  right: 2px;
+}
+
+.bag label:last-child:before {
+  content: "";
+  position: absolute;
+  left: -64px;
+  display: block;
+  width: 128px;
+  height: 0px;
+  transform: rotate(-60deg);
+
+  border-bottom: 1px dashed black;
+}
+
+.bag .input-group {
+  overflow: hidden;
+}
+
+.bag input[type="text"] {
+  height: 64px;
+}
+
+.spellbook {
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid black;
+  padding: 18px;
+}
+
+.book {
+  width: calc(100% / 3);
+  padding: 9px;
+}
+
+.book:nth-child(1) {
+  width: calc(100% / 3 - 10px);
+  padding: 0 9px 9px 0;
+  border-right: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+.book:nth-child(2) {
+  width: calc(100% / 3 - 19px);
+  padding: 0 9px 0 9px;
+  border-right: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+.book:nth-child(3) {
+  width: calc(100% / 3 - 9px);
+  padding: 0 0 0 9px;
+  border-bottom: 1px dashed black;
+}
+.book:nth-child(4) {
+  width: calc(100% / 3 - 10px);
+  padding: 9px 9px 0 0;
+  border-right: 1px dashed black;
+}
+.book:nth-child(5) {
+  width: calc(100% / 3 - 19px);
+  padding: 9px 9px 0 9px;
+  border-right: 1px dashed black;
+}
+.book:nth-child(6) {
+  width: calc(100% / 3 - 9px);
+  padding: 9px 0 0 9px;
+}
+
+.book .repitem {
+  margin: 6px 0;
+  border: 2px solid black;
+  background: white;
+  box-shadow: 2px 2px 2px 0 rgba(51, 51, 51, 0.3);
+}
+
+.book .card {
+  padding: 6px;
+  border: 6px solid black;
+  border-color: rgba(51, 51, 51, 0.3);
+}
+
+input[type="hidden"][name="attr_type"][value="ritual"] ~ .card {
+  border-color: rgba(232, 185, 35, 0.3);
+}
+input[type="hidden"][name="attr_type"][value="relic"] ~ .card {
+  border-color: rgba(255, 0, 153, 0.3);
+}
+input[type="hidden"][name="attr_type"][value="familiar"] ~ .card {
+  border-color: rgba(0, 238, 255, 0.3);
+}
+
+.book h4 {
+  font-family: "Yatra One", system-ui;
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  text-transform: uppercase;
+}
+
+.book input[type="text"] {
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.book textarea {
+  text-align: left;
+  height: calc(18px * 3);
+}
+
+.book .type {
+  display: flex;
+  flex-flow: row nowrap;
+  width: fit-content;
+  column-gap: 18px;
+  transform: scale(0.5);
+  transform-origin: center bottom;
+}
+
+.book label {
+  all: unset;
+}
+
+/* Repeater controls */
+.repcontrol .btn {
+  all: unset;
+  font-family: "Yatra One", system-ui;
+}

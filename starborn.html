@@ -1,0 +1,689 @@
+<div class="starborn-sheet">
+  <input type="hidden" name="attr_edit" value="on" />
+  <div class="banner mode-select">
+    <label class="edit-mode">
+      <input type="checkbox" name="attr_edit" />
+      <span></span>
+    </label>
+  </div>
+
+  <span class="tagline"
+    >A game about <u>magic</u> in the <u>depths of space</u></span
+  >
+  <h1 class="ribbon">
+    <span><span class="logo">Starborn</span></span>
+  </h1>
+
+  <div class="content">
+    <div class="col col-main">
+      <div class="section section-details">
+        <h2 class="section-title">
+          <div><span>Details</span></div>
+        </h2>
+        <div class="group group-details">
+          <label
+            ><span>Name</span><input type="text" name="attr_character_fullname"
+          /></label>
+          <label
+            ><span>Age</span><input type="text" name="attr_character_age"
+          /></label>
+          <label
+            ><span>Pronouns</span
+            ><input type="text" name="attr_character_pronouns"
+          /></label>
+        </div>
+        <label class="textarea"
+          ><span>Description</span
+          ><textarea name="attr_character_description" />
+        </label>
+      </div>
+
+      <div class="section section-attributes">
+        <h2 class="section-title">
+          <div><span>Attributes</span></div>
+        </h2>
+
+        <div class="group group-attributes">
+          <div>
+            <label class="pool pool-level">
+              <span>Level</span>
+              <input type="text" name="attr_level" />
+            </label>
+
+            <div class="pool pool-health">
+              <span>Health</span>
+
+              <div class="input-group">
+                <label class="cur">
+                  <span>Cur</span>
+                  <input type="text" name="attr_health" />
+                </label>
+                <label class="max">
+                  <span>Max</span>
+                  <input type="text" name="attr_health_max" />
+                </label>
+              </div>
+            </div>
+
+            <label class="pool pool-spark">
+              <span>Spark</span>
+              <input type="text" name="attr_spark" />
+            </label>
+          </div>
+
+          <!-- Frenzy -->
+          <div class="pool pool-attribute">
+            <div class="label">
+              <span>Frenzy</span>
+              <span>Passion, Agility</span>
+            </div>
+            <div class="meter meter-frenzy">
+              <input type="hidden" name="attr_edit" />
+              <div class="mode-toggle">
+                <input type="checkbox" name="attr_edit" /><span></span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_frenzy_1_mode" value="0" />
+                <input type="radio" name="attr_frenzy_1_mode" value="0" />
+                <input type="radio" name="attr_frenzy_1_mode" value="1" />
+                <input type="radio" name="attr_frenzy_1_mode" value="2" />
+                <span>
+                  <span name="attr_frenzy_1_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_frenzy_1" value="+0" />
+                <input type="radio" name="attr_frenzy_1" value="+0" />
+                <input type="radio" name="attr_frenzy_1" value="-1" />
+                <input type="radio" name="attr_frenzy_1" value="+1" />
+                <span>
+                  <span name="attr_frenzy_1_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_frenzy_2_mode" value="0" />
+                <input type="radio" name="attr_frenzy_2_mode" value="0" />
+                <input type="radio" name="attr_frenzy_2_mode" value="1" />
+                <input type="radio" name="attr_frenzy_2_mode" value="2" />
+                <span>
+                  <span name="attr_frenzy_2_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_frenzy_2" value="+0" />
+                <input type="radio" name="attr_frenzy_2" value="+0" />
+                <input type="radio" name="attr_frenzy_2" value="-1" />
+                <input type="radio" name="attr_frenzy_2" value="+1" />
+                <span>
+                  <span name="attr_frenzy_2_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_frenzy_3_mode" value="0" />
+                <input type="radio" name="attr_frenzy_3_mode" value="0" />
+                <input type="radio" name="attr_frenzy_3_mode" value="1" />
+                <input type="radio" name="attr_frenzy_3_mode" value="2" />
+                <span>
+                  <span name="attr_frenzy_3_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_frenzy_3" value="+0" />
+                <input type="radio" name="attr_frenzy_3" value="+0" />
+                <input type="radio" name="attr_frenzy_3" value="-1" />
+                <input type="radio" name="attr_frenzy_3" value="+1" />
+                <span>
+                  <span name="attr_frenzy_3_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_frenzy_4_mode" value="0" />
+                <input type="radio" name="attr_frenzy_4_mode" value="0" />
+                <input type="radio" name="attr_frenzy_4_mode" value="1" />
+                <input type="radio" name="attr_frenzy_4_mode" value="2" />
+                <span>
+                  <span name="attr_frenzy_4_max"> </span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_frenzy_4" value="+0" />
+                <input type="radio" name="attr_frenzy_4" value="+0" />
+                <input type="radio" name="attr_frenzy_4" value="-1" />
+                <input type="radio" name="attr_frenzy_4" value="+1" />
+                <span>
+                  <span name="attr_frenzy_4_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_frenzy_5_mode" value="0" />
+                <input type="radio" name="attr_frenzy_5_mode" value="0" />
+                <input type="radio" name="attr_frenzy_5_mode" value="1" />
+                <input type="radio" name="attr_frenzy_5_mode" value="2" />
+                <span>
+                  <span name="attr_frenzy_5_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_frenzy_5" value="+0" />
+                <input type="radio" name="attr_frenzy_5" value="+0" />
+                <input type="radio" name="attr_frenzy_5" value="-1" />
+                <input type="radio" name="attr_frenzy_5" value="+1" />
+                <span>
+                  <span name="attr_frenzy_5_max"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth -->
+          <div class="pool pool-attribute">
+            <div class="label">
+              <span>Growth</span>
+              <span>Strength, Endurance</span>
+            </div>
+            <div class="meter meter-growth">
+              <input type="hidden" name="attr_edit" />
+              <div class="mode-toggle">
+                <input type="checkbox" name="attr_edit" /><span></span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_growth_1_mode" value="0" />
+                <input type="radio" name="attr_growth_1_mode" value="0" />
+                <input type="radio" name="attr_growth_1_mode" value="1" />
+                <input type="radio" name="attr_growth_1_mode" value="2" />
+                <span>
+                  <span name="attr_growth_1_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_growth_1" value="+0" />
+                <input type="radio" name="attr_growth_1" value="+0" />
+                <input type="radio" name="attr_growth_1" value="-1" />
+                <input type="radio" name="attr_growth_1" value="+1" />
+                <span>
+                  <span name="attr_growth_1_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_growth_2_mode" value="0" />
+                <input type="radio" name="attr_growth_2_mode" value="0" />
+                <input type="radio" name="attr_growth_2_mode" value="1" />
+                <input type="radio" name="attr_growth_2_mode" value="2" />
+                <span>
+                  <span name="attr_growth_2_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_growth_2" value="+0" />
+                <input type="radio" name="attr_growth_2" value="+0" />
+                <input type="radio" name="attr_growth_2" value="-1" />
+                <input type="radio" name="attr_growth_2" value="+1" />
+                <span>
+                  <span name="attr_growth_2_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_growth_3_mode" value="0" />
+                <input type="radio" name="attr_growth_3_mode" value="0" />
+                <input type="radio" name="attr_growth_3_mode" value="1" />
+                <input type="radio" name="attr_growth_3_mode" value="2" />
+                <span>
+                  <span name="attr_growth_3_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_growth_3" value="+0" />
+                <input type="radio" name="attr_growth_3" value="+0" />
+                <input type="radio" name="attr_growth_3" value="-1" />
+                <input type="radio" name="attr_growth_3" value="+1" />
+                <span>
+                  <span name="attr_growth_3_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_growth_4_mode" value="0" />
+                <input type="radio" name="attr_growth_4_mode" value="0" />
+                <input type="radio" name="attr_growth_4_mode" value="1" />
+                <input type="radio" name="attr_growth_4_mode" value="2" />
+                <span>
+                  <span name="attr_growth_4_max"> </span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_growth_4" value="+0" />
+                <input type="radio" name="attr_growth_4" value="+0" />
+                <input type="radio" name="attr_growth_4" value="-1" />
+                <input type="radio" name="attr_growth_4" value="+1" />
+                <span>
+                  <span name="attr_growth_4_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_growth_5_mode" value="0" />
+                <input type="radio" name="attr_growth_5_mode" value="0" />
+                <input type="radio" name="attr_growth_5_mode" value="1" />
+                <input type="radio" name="attr_growth_5_mode" value="2" />
+                <span>
+                  <span name="attr_growth_5_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_growth_5" value="+0" />
+                <input type="radio" name="attr_growth_5" value="+0" />
+                <input type="radio" name="attr_growth_5" value="-1" />
+                <input type="radio" name="attr_growth_5" value="+1" />
+                <span>
+                  <span name="attr_growth_5_max"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order -->
+          <div class="pool pool-attribute">
+            <div class="label">
+              <span>Order</span>
+              <span>Intellect, Perception</span>
+            </div>
+            <div class="meter meter-order">
+              <input type="hidden" name="attr_edit" />
+              <div class="mode-toggle">
+                <input type="checkbox" name="attr_edit" /><span></span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_order_1_mode" value="0" />
+                <input type="radio" name="attr_order_1_mode" value="0" />
+                <input type="radio" name="attr_order_1_mode" value="1" />
+                <input type="radio" name="attr_order_1_mode" value="2" />
+                <span>
+                  <span name="attr_order_1_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_order_1" value="+0" />
+                <input type="radio" name="attr_order_1" value="+0" />
+                <input type="radio" name="attr_order_1" value="-1" />
+                <input type="radio" name="attr_order_1" value="+1" />
+                <span>
+                  <span name="attr_order_1_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_order_2_mode" value="0" />
+                <input type="radio" name="attr_order_2_mode" value="0" />
+                <input type="radio" name="attr_order_2_mode" value="1" />
+                <input type="radio" name="attr_order_2_mode" value="2" />
+                <span>
+                  <span name="attr_order_2_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_order_2" value="+0" />
+                <input type="radio" name="attr_order_2" value="+0" />
+                <input type="radio" name="attr_order_2" value="-1" />
+                <input type="radio" name="attr_order_2" value="+1" />
+                <span>
+                  <span name="attr_order_2_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_order_3_mode" value="0" />
+                <input type="radio" name="attr_order_3_mode" value="0" />
+                <input type="radio" name="attr_order_3_mode" value="1" />
+                <input type="radio" name="attr_order_3_mode" value="2" />
+                <span>
+                  <span name="attr_order_3_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_order_3" value="+0" />
+                <input type="radio" name="attr_order_3" value="+0" />
+                <input type="radio" name="attr_order_3" value="-1" />
+                <input type="radio" name="attr_order_3" value="+1" />
+                <span>
+                  <span name="attr_order_3_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_order_4_mode" value="0" />
+                <input type="radio" name="attr_order_4_mode" value="0" />
+                <input type="radio" name="attr_order_4_mode" value="1" />
+                <input type="radio" name="attr_order_4_mode" value="2" />
+                <span>
+                  <span name="attr_order_4_max"> </span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_order_4" value="+0" />
+                <input type="radio" name="attr_order_4" value="+0" />
+                <input type="radio" name="attr_order_4" value="-1" />
+                <input type="radio" name="attr_order_4" value="+1" />
+                <span>
+                  <span name="attr_order_4_max"></span>
+                </span>
+              </div>
+
+              <div class="box">
+                <input type="hidden" name="attr_order_5_mode" value="0" />
+                <input type="radio" name="attr_order_5_mode" value="0" />
+                <input type="radio" name="attr_order_5_mode" value="1" />
+                <input type="radio" name="attr_order_5_mode" value="2" />
+                <span>
+                  <span name="attr_order_5_max"></span>
+                </span>
+              </div>
+              <div class="edit">
+                <input type="hidden" name="attr_order_5" value="+0" />
+                <input type="radio" name="attr_order_5" value="+0" />
+                <input type="radio" name="attr_order_5" value="-1" />
+                <input type="radio" name="attr_order_5" value="+1" />
+                <span>
+                  <span name="attr_order_5_max"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group group-status">
+          <div class="status">
+            <label>
+              <input class="toggle" type="checkbox" name="attr_injured" />
+              <span>Injured</span>
+            </label>
+            <label>
+              <input class="toggle" type="checkbox" name="attr_fatigued" />
+              <span>Fatigued</span>
+            </label>
+            <label>
+              <input class="toggle" type="checkbox" name="attr_addled" />
+              <span>Addled</span>
+            </label>
+            <label>
+              <input class="toggle" type="checkbox" name="attr_cursed" />
+              <span>Cursed</span>
+            </label>
+          </div>
+          <span class="spacer" />
+          <div class="heat">
+            <span>Heat</span>
+            <div class="meter">
+              <input class="toggle" type="checkbox" name="attr_heat_1" />
+              <input class="toggle" type="checkbox" name="attr_heat_2" />
+              <input class="toggle" type="checkbox" name="attr_heat_3" />
+              <input class="toggle" type="checkbox" name="attr_heat_4" />
+              <input class="toggle" type="checkbox" name="attr_heat_5" />
+              <input class="toggle" type="checkbox" name="attr_heat_6" />
+            </div>
+          </div>
+          <div class="hunted">
+            <span>Hunted</span>
+            <div class="meter">
+              <input
+                class="toggle special"
+                type="checkbox"
+                name="attr_hunted_1"
+              />
+              <input
+                class="toggle special"
+                type="checkbox"
+                name="attr_hunted_2"
+              />
+              <input
+                class="toggle special"
+                type="checkbox"
+                name="attr_hunted_3"
+              />
+              <input
+                class="toggle special"
+                type="checkbox"
+                name="attr_hunted_4"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-loadout">
+        <h2 class="section-title">
+          <div><span>Loadout</span></div>
+        </h2>
+
+        <div class="group group-bags">
+          <div class="bag bag-herbs">
+            <span>Herb <span>&amp;</span> Tincture</span>
+
+            <div class="input-group">
+              <label class="cur">
+                <span>Used</span>
+                <input type="text" name="attr_herb" />
+              </label>
+              <label class="max">
+                <span>Max</span>
+                <input type="text" name="attr_herb_max" />
+              </label>
+            </div>
+          </div>
+
+          <div class="bag bag-charms">
+            <span>Charm <span>&amp;</span> Oddment</span>
+
+            <div class="input-group">
+              <label class="cur">
+                <span>Used</span>
+                <input type="text" name="attr_charm" />
+              </label>
+              <label class="max">
+                <span>Max</span>
+                <input type="text" name="attr_charm_max" />
+              </label>
+            </div>
+          </div>
+
+          <div class="bag bag-blood">
+            <span>Blood <span>&amp;</span> Trophy</span>
+
+            <div class="input-group">
+              <label class="cur">
+                <span>Used</span>
+                <input type="text" name="attr_blood" />
+              </label>
+              <label class="max">
+                <span>Max</span>
+                <input type="text" name="attr_blood_max" />
+              </label>
+            </div>
+          </div>
+
+          <div class="bag bag-gear">
+            <span>Gear <span>&amp;</span> Suply</span>
+
+            <div class="input-group">
+              <label class="cur">
+                <span>Used</span>
+                <input type="text" name="attr_gear" />
+              </label>
+              <label class="max">
+                <span>Max</span>
+                <input type="text" name="attr_gear_max" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="group group-status">
+          <div class="strain">
+            <span>Strain</span>
+            <div class="meter">
+              <input class="toggle" type="checkbox" name="attr_strain_1" />
+              <input class="toggle" type="checkbox" name="attr_strain_2" />
+              <input class="toggle" type="checkbox" name="attr_strain_3" />
+              <input class="toggle" type="checkbox" name="attr_strain_4" />
+              <input class="toggle" type="checkbox" name="attr_strain_5" />
+              <input class="toggle" type="checkbox" name="attr_strain_6" />
+              <input class="toggle" type="checkbox" name="attr_strain_7" />
+              <input class="toggle" type="checkbox" name="attr_strain_8" />
+              <input class="toggle" type="checkbox" name="attr_strain_9" />
+              <input class="toggle" type="checkbox" name="attr_strain_10" />
+              <input class="toggle" type="checkbox" name="attr_strain_11" />
+              <input class="toggle" type="checkbox" name="attr_strain_12" />
+            </div>
+          </div>
+          <span class="spacer" />
+          <div class="wallet">
+            <span>Wallet</span>
+            <div class="meter">
+              <input class="toggle" type="checkbox" name="attr_coin_1" />
+              <input class="toggle" type="checkbox" name="attr_coin_2" />
+              <input class="toggle" type="checkbox" name="attr_coin_3" />
+            </div>
+            <div class="meter">
+              <input class="toggle" type="checkbox" name="attr_coin_4" />
+              <input class="toggle" type="checkbox" name="attr_coin_5" />
+              <input class="toggle" type="checkbox" name="attr_coin_6" />
+            </div>
+            <div class="meter">
+              <input class="toggle" type="checkbox" name="attr_coin_7" />
+              <input class="toggle" type="checkbox" name="attr_coin_8" />
+              <input class="toggle" type="checkbox" name="attr_coin_9" />
+            </div>
+            <div class="meter">
+              <input class="toggle" type="checkbox" name="attr_coin_10" />
+              <input class="toggle" type="checkbox" name="attr_coin_11" />
+              <input class="toggle" type="checkbox" name="attr_coin_12" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-grimoire">
+        <h2 class="section-title">
+          <div><span>Grimoire</span></div>
+        </h2>
+
+        <div class="spellbook">
+          <div class="book book-cantrips">
+            <h4>Cantrips:</h4>
+            <fieldset class="repeating_cantrips">
+              <input type="hidden" name="attr_type" />
+
+              <div class="card">
+                <input type="text" name="attr_spellname" value="Spell name" />
+                <textarea name="attr_spelldesc" />
+                <div class="type">
+                  <label>
+                    <input
+                      class="toggle"
+                      type="radio"
+                      name="attr_type"
+                      value="ritual"
+                    />
+                    <span>Ritual</span>
+                  </label>
+                  <label>
+                    <input
+                      class="toggle"
+                      type="radio"
+                      name="attr_type"
+                      value="relic"
+                    />
+                    <span>Relic</span>
+                  </label>
+                  <label>
+                    <input
+                      class="toggle"
+                      type="radio"
+                      name="attr_type"
+                      value="familiar"
+                    />
+                    <span>Familiar</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="book book-first">
+            <h4>1st level:</h4>
+            <fieldset class="repeating_first">
+              <input type="text" name="attr_spellname" />
+              <textarea name="attr_spelldesc" />
+            </fieldset>
+          </div>
+
+          <div class="book book-third">
+            <h4>3rd level:</h4>
+            <fieldset class="repeating_third">
+              <input type="text" name="attr_spellname" />
+              <textarea name="attr_spelldesc" />
+            </fieldset>
+          </div>
+
+          <div class="book book-fifth">
+            <h4>5th level:</h4>
+            <fieldset class="repeating_fifth">
+              <input type="text" name="attr_spellname" />
+              <textarea name="attr_spelldesc" />
+            </fieldset>
+          </div>
+
+          <div class="book book-seventh">
+            <h4>7th level:</h4>
+            <fieldset class="repeating_seventh">
+              <input type="text" name="attr_spellname" />
+              <textarea name="attr_spelldesc" />
+            </fieldset>
+          </div>
+
+          <div class="book book-tenth">
+            <h4>10th level:</h4>
+            <fieldset class="repeating_tenth">
+              <input type="text" name="attr_spellname" />
+              <textarea name="attr_spelldesc" />
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-sidebar"></div>
+  </div>
+</div>
+
+<script type="text/worker">
+  on("change:frenzy_1 change:frenzy_2 change:frenzy_3 change:frenzy_4 change:frenzy_5 change:growth_1 change:growth_2 change:growth_3 change:growth_4 change:growth_5 change:order_1 change:order_2 change:order_3 change:order_4 change:order_5", function(e) {
+    let target = e.sourceAttribute+"_max";
+    let value = e.newValue
+    let result = (value) => {
+      switch(value) {
+        case '-1':
+        return "-";
+        break;
+
+        case '+0':
+        return " ";
+        break;
+
+        case '+1':
+        return "+";
+        break;
+      }
+    }
+
+    setAttrs({[target]: result(value)})
+  });
+</script>
